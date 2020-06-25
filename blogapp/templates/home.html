@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>반갑습니다 조영상 블로그입니다</h1>
+
+<a href=" {% url 'new' %} ">CREATE</a>
+
+<div style="background-color: bisque;" >    
+    {% for blog in blogs.all %}
+        <h1>{{blog.title}}</h1>    
+        <p>{{blog.pub_date}}</p>
+        <p>{{blog.summary}} <a href=" {% url 'detail' blog.id %} ">...more</a> </p>
+        <p>{{blog.id}}</p>
+    {% endfor %}
+</div>        
+
+</body>
+</html>

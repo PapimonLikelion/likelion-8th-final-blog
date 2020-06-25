@@ -1,0 +1,12 @@
+<h1>UPDATE!</h1>
+
+<form action=" {% url 'update_final' blog %} ">
+    <h4>제목:</h4>
+    <h4>기존: {{blog}} </h4>
+    <input type="text" name="title">
+    <br><br>
+    <h4>본문 : </h4>
+    <textarea name="body" id="" cols="30" rows="10"></textarea>
+    <br><br>
+    <input type='submit' class='btn btn-dark' value="SUBMIT">
+</form>
